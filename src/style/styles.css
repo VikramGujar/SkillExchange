@@ -4,8 +4,9 @@
     --btn-color:#FFC200;
     --bg-color:#F9FAFC;
     --txt-color:#222;
-    --txt-colorW:#fff; 
+    
 }
+
 
 
 /*----------------------------------- Common Style for all --------------------------------------*/
@@ -118,6 +119,27 @@ header {
    width: 50rem;
    height: 41rem;;
 }
+
+
+@media screen and (max-width: 768px) {
+    .about-part-one,
+    .about-part-two {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-info, 
+    .left-info {
+        width: 100%;
+    }
+
+    .left-image,
+    .right-image {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
 /*----------------------------------- Footer Section Style --------------------------------------*/
 footer {
     background: var(--txt-color);

@@ -1,0 +1,102 @@
+
+:root {
+            --btn-color: #FFC200;
+            --bg-color: #F9FAFC;
+            --txt-color: #222;
+            --txt-colorW: #fff;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: var(--txt-colorW);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--txt-color);
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 0.9rem;
+            color: var(--txt-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: var(--txt-color);
+            background-color: #fff;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--btn-color);
+        }
+
+        .btn-login {
+            background-color: var(--btn-color);
+            color: var(--txt-colorW);
+            padding: 1rem;
+            font-size: 1.1rem;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #ffb300;
+        }
+
+        .create-account {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .create-account a {
+            color: var(--btn-color);
+            text-decoration: none;
+        }
+
+        .create-account a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 1.5rem;
+            }
+
+            .btn-login {
+                font-size: 1rem;
+            }
+        }
+
