@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Page</title>
+    <style>
+        :root {
+            --btn-color: #FFC200;
+            --bg-color: #F9FAFC;
+            --txt-color: #222;
+            --txt-colorW: #fff;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background-color: var(--txt-colorW);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--txt-color);
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 0.9rem;
+            color: var(--txt-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: var(--txt-color);
+            background-color: #fff;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--btn-color);
+        }
+
+        .password-strength {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.5rem;
+            text-align: left;
+        }
+
+        .password-error {
+            color: red;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .btn-register {
+            background-color: var(--btn-color);
+            color: var(--txt-colorW);
+            padding: 1rem;
+            font-size: 1.1rem;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-register:hover {
+            background-color: #ffb300;
+        }
+
+        .login-redirect {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .login-redirect a {
+            color: var(--btn-color);
+            text-decoration: none;
+        }
+
+        .login-redirect a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .register-container {
+                padding: 1.5rem;
+            }
+
+            .btn-register {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Register</h2>
+        <form id="register-form" action="#" method="POST">
+            <!-- First Name input -->
+            <div class="input-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+            </div>
+
+            <!-- Last Name input -->
+            <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+            </div>
+
+            <!-- Username input -->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+
+            <!-- Password input -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter a strong password">
+                <div class="password-strength" id="password-strength"></div>
+            </div>
+
+            <!-- Confirm Password input -->
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+                <div class="password-error" id="password-error"></div>
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="btn-register" id="register-btn">Register</button>
+        </form>
+
+        <div class="login-redirect">
+            <p>Already have an account? <a href="./login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Password Strength Validation
+        const passwordField = document.getElementById('password');
+        const confirmPasswordField = document.getElementById('confirm-password');
+        const passwordStrengthDisplay = document.getElementById('password-strength');
+        const passwordErrorDisplay = document.getElementById('password-error');
+        const registerForm = document.getElementById('register-form');
+        const registerBtn = document.getElementById('register-btn');
+
+        function checkPasswordStrength(password) {
+            const strengthCriteria = [
+                /[A-Z]/,  // Uppercase letter
+                /[a-z]/,  // Lowercase letter
+                /[0-9]/,  // Number
+                /[\W_]/   // Special character
+            ];
+            let strength = 0;
+
+            strengthCriteria.forEach(pattern => {
+                if (pattern.test(password)) strength++;
+            });
+
+            if (strength === 0) {
+                passwordStrengthDisplay.textContent = 'Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character.';
+                passwordStrengthDisplay.style.color = 'red';
+            } else if (strength === 1) {
+                passwordStrengthDisplay.textContent = 'Password strength: Weak';
+                passwordStrengthDisplay.style.color = 'red';
+            } else if (strength === 2) {
+                passwordStrengthDisplay.textContent = 'Password strength: Moderate';
+                passwordStrengthDisplay.style.color = 'orange';
+            } else {
+                passwordStrengthDisplay.textContent = 'Password strength: Strong';
+                passwordStrengthDisplay.style.color = 'green';
+            }
+        }
+
+        function validatePasswords() {
+            if (passwordField.value !== confirmPasswordField.value) {
+                passwordErrorDisplay.textContent = 'Passwords do not match.';
+                passwordErrorDisplay.style.color = 'red';
+                return false;
+            } else {
+                passwordErrorDisplay.textContent = '';
+                return true;
+            }
+        }
+
+        passwordField.addEventListener('input', () => {
+            checkPasswordStrength(passwordField.value);
+        });
+
+        confirmPasswordField.addEventListener('input', validatePasswords);
+
+        registerForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (passwordField.value && validatePasswords()) {
+                alert('Registration successful!');
+                // You can submit the form data via AJAX here.
+            } else {
+                alert('Please fix the errors before submitting.');
+            }
+        });
+    </script>
+
+</body>
+</html>
