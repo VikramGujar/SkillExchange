@@ -2,51 +2,297 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Exchange</title>
-    <link rel="icon" href="./public/assets/image/Header-logo.png">
-    <link rel="stylesheet" href="./src/style/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill Exchange</title>
+<link rel="icon" href="./public/assets/image/Header-logo.png">
+<link rel="stylesheet" href="./src/style/styles.css">
+<link rel="stylesheet" href="./Bootstrap/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="./Bootstrap/css/boostrap.min.css" />
+
+
 </head>
 
-<body>
+<body class="">
 
-    <!----------------------------------- Header Section --------------------------------------------->
-    <header>
-        <div class="logo"><img src="./public/assets/image/Header-logo.png " alt="" width="80%" height="50px"></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="./public/html/login.html" id="login" class="btn">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+	<!----------------------------------- Header Section --------------------------------------------->
+	<header class="header">
+		<div class="logo">
+			<img src="public/assets/image/Header-logo.png " alt="" width="80%"
+				height="50rem">
+		</div>
+		<nav class="nav">
+			<ul class="navbar">
+				<li><a href="#home" class="navbar-link">Home</a>
+				<li>
+				<li><a href="#about" class="navbar-link">About</a>
+				<li>
+				<li><a href="#review" class="navbar-link">Review</a>
+				<li>
+				<li><a href="#contact" class="navbar-link">Contact</a>
+				<li>
+			</ul>
+			<ul class="nav-links">
+				<li><a href="./public/html/login.html" id="login" class="btn">Login</a></li>
+			</ul>
+		</nav>
+	</header>
 
 
-    <!----------------------------------- Home Section --------------------------------------------->
-    <section id="home">
-        <div class="col-1">
-            <h1>Unlock Your Potential</h1>
-            <p>Teach what you know. Learn what you don’t. Join our <a href="#" class="para-1">skill exchange</a>
-                <br>community today!
-            </p>
-            <div class="home-buttons">
-                <button class="btn">Get Started</button>
-            </div>
-        </div>
+	<!----------------------------------- Home Section --------------------------------------------->
+	<section id="home">
+		<div class="col-1">
+			<h1>Unlock Your Potential</h1>
+			<p>
+				Teach what you know. Learn what you don’t. Join our <a href="#"
+					class="para-1">skill exchange</a> <br>community today!
+			</p>
+			<div class="home-buttons">
+				<a href="./public/html/login.html">
+					<button class="btn">Get Started</button>
+				</a>
+
+			</div>
+		</div>
 
 
-        <div class="col-2">
-           <img src="./public/assets/image/homecol-2Img.jpg" alt="boy-Image">
-        </div>
+		<div class="col-2">
+			<img src="public/assets/image/homecol-2Img.jpg" alt="boy-Image">
+		</div>
 
-    </section>
+	</section>
 
-    <!----------------------------------- Footer Section --------------------------------------------->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Skill Exchange. All rights reserved.</p>
-        </div>
-    </footer>
+	<!----------------------------------- About Section --------------------------------------------->
+
+	<section id="about">
+		<h1 class="section-heading" style="padding-top: 20px;">About Us</h1>
+
+		<div class="about-part-one">
+			<div class="right-info">
+				<div class="our-mission">
+					<h3>Our Mission</h3>
+					<p>
+						We are Vikram and Gokul, two passionate learners currently
+						pursuing a Java Full Stack course at Naresh IT in Hyderabad, after
+						completing our BCA degrees in 2024. This project was born from a
+						memorable experience of helping a friend understand a concept,
+						which not only benefited them but also deepened our understanding.
+						This moment made us realize the power of shared learning and
+						inspired us to create something meaningful. We believe that
+						education doesn’t have to be costly and that by sharing skills, we
+						can empower individuals to learn and grow together.<br>
+						<br> &nbsp;&nbsp;&nbsp;&nbsp;Our mission is to build a
+						platform where people can exchange skills and knowledge without
+						the need for money. The idea is simple: you teach the skill you
+						know, and in return, you learn the skill you want. By fostering a
+						friendly and collaborative community, we aim to connect people
+						with unique talents, enabling them to achieve personal and
+						professional goals. Together, we envision a world where mutual
+						learning, creativity, and the spirit of collaboration drive growth
+						and empowerment for all.
+					</p>
+				</div>
+			</div>
+
+			<div class="left-image">
+				<img alt="learning-together"
+					src="public/assets/image/about_right_img.jpg">
+			</div>
+		</div>
+		
+		
+		<div class="about-part-two">
+			<div class="right-image">
+				<img alt="Our-vision" src="public/assets/image/about_left_img.jpg">
+			</div>
+			<div class="left-info">
+				<div class="why-we-started">
+					<h3>Why We Started This Project?</h3>
+					<p>We started this project to create a solution where learning
+						and skill development can happen without the burden of cost.
+						During our studies, we realized how impactful it was to help a
+						friend understand a concept; it not only boosted their
+						understanding but also deepened our own knowledge. This exchange
+						of skills and knowledge was mutually beneficial, inspiring us to
+						take this idea further.<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;Our vision is to build a community where
+						learning is accessible to everyone, free from financial barriers.
+						By connecting people with complementary skills, we aim to foster a
+						culture of collaboration, mutual growth, and empowerment. Through
+						this platform, we envision a world where knowledge-sharing becomes
+						a way of life, helping individuals grow together and achieve their
+						goals.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!----------------------------------- Review Section --------------------------------------------->
+	<section class="reviews" id="review">
+		<h1 class="section-heading">Our Reviews</h1>
+
+		<h2>What People Are Saying</h2>
+		<div class="review-container">
+			<div class="review">
+				<p class="review-text">"This platform is amazing! It helped me
+					learn so much from others, and I love how it's all about sharing
+					knowledge for free. Highly recommend it!"</p>
+				<div class="reviewer">
+					<img src="public/assets/image/review-1.jpeg" alt="Reviewer 1">
+					<div class="reviewer-info">
+						<h3>Harun Patel</h3>
+						<p>BCA Student</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="review">
+				<p class="review-text">"A great way to learn and teach at the
+					same time. The concept of skill-sharing is brilliant, and the
+					platform is so easy to use!"</p>
+				<div class="reviewer">
+					<img src="public/assets/image/review-2.jpeg" alt="Reviewer 2">
+					<div class="reviewer-info">
+						<h3>Priya Halke</h3>
+						<p>Naresh IT Student</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="review">
+				<p class="review-text">"I never thought I could learn new skills
+					while helping others, but this platform made it possible. The
+					experience is both rewarding and educational!"</p>
+				<div class="reviewer">
+					<img src="public/assets/image/review-3.jpeg" alt="Reviewer 3">
+					<div class="reviewer-info">
+						<h3>Amrita Sutte</h3>
+						<p>B.tech Student</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="review">
+				<p class="review-text">"This platform has allowed me to develop
+					new skills while helping others. It's a rewarding and educational
+					experience all in one!"</p>
+				<div class="reviewer">
+					<img src="public/assets/image/review-4.jpeg" alt="Reviewer 4">
+					<div class="reviewer-info">
+						<h3>Aman Kumar</h3>
+						<p>M.tech IIT</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!----------------------------------- Contact Section --------------------------------------------->
+	<section id="contact" class="contact-section">
+		<h1 class="section-heading">Contact Us</h1>
+		<div class="contact-container">
+			<div class="contact-content">
+
+				<div class="contact-info-container">
+					<div class="contact-info-header">
+						<img src="public/assets/image/contact-img.jpg" alt="Contact Image"
+							class="contact-info-image" />
+					</div>
+					<h3>Get in Touch</h3>
+					<p>If you have any questions or would like more information,
+						you can reach out to us through the following:</p>
+					<div class="contact-details">
+						<div class="contact-item">
+							<strong>Email:</strong> <a href="mailto:skillexchange@gmail.com">skillexchange@gmail.com</a>
+						</div>
+						<div class="contact-item">
+							<strong>Phone:</strong> <a href="tel:+919577014555">+91
+								9577014555</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-form-container">
+					<form action="" method="POST" class="contact-form">
+						<label for="name">Full Name</label> <input type="text" id="name"
+							name="name" placeholder="Your Name" required> <label
+							for="email">Email Address</label> <input type="email" id="email"
+							name="email" placeholder="Your Email" required> <label
+							for="message">Message</label>
+						<textarea id="message" name="message" placeholder="Your Message"
+							required></textarea>
+
+						<button type="submit" class="btn">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!----------------------------------- Footer Section --------------------------------------------->
+	<footer>
+		<div class="footer-container">
+			<div class="footer-logo" style="width: 20%;">
+				<img src="public/assets/image/Header_logo-2.png"
+					alt="SkillExchange Logo" />
+			</div>
+
+
+			<div class="footer-gratitude" style="width: 40%;">
+				<p>We are grateful for the opportunity to help others learn and
+					grow. Thank you for being a part of our journey!</p>
+			</div>
+
+
+			<div class="footer-links" style="width: 20%;">
+				<ul>
+					<li><span class="bi bi-arrow-right-short footer-span"></span> <a href="#home">Home</a></li>
+					<li><span class="bi bi-arrow-right-short footer-span"></span> <a href="#about">About</a></li>
+					<li><span class="bi bi-arrow-right-short footer-span"></span> <a href="#review">Review</a></li>
+					<li><span class="bi bi-arrow-right-short footer-span"></span> <a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+
+
+			<div class="social-links" style="width: 20%;">
+				<ul>
+					<li><a href="linkedin" target="_blank"><i
+							class="bi bi-linkedin"></i> LinkedIn</a></li>
+					<li><a href="github" target="_blank"><i
+							class="bi bi-github"></i> GitHub</a></li>
+					<li><a href="facebook" target="_blank"><i
+							class="bi bi-facebook"></i> Facebook</a></li>
+					<li><a href="instagram" target="_blank"><i
+							class="bi bi-instagram"></i> Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="footer-bottom">
+			<p>
+				&copy; <span id="current-year"></span> SkillExchange. All rights
+				reserved.
+			</p>
+		</div>
+	</footer>
+
+
+	<!----------------JavaScript Code -------------------->
+
+	<!-- Adding Boostrap and Jquery files -->
+	<script src="./Bootstrap/jquery/dist/jquery.js"></script>
+	<script src="./Bootstrap/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+	<script>
+		// for dinamic year
+		document.getElementById("current-year").textContent = new Date()
+				.getFullYear();
+	</script>
+
 </body>
 
 </html>
