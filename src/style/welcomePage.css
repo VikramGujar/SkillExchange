@@ -1,0 +1,124 @@
+
+/*------------------------------ Common style ---------------------------------- */
+:root 
+{
+	--btn-color: #FFC200;
+	--bg-color: #F9FAFC;
+	--txt-color: #222;
+	--white-color: #fff;
+	
+	--btn-color: #FFC200;
+	--btn-hover-color: #ff9900;
+	--white-color: #ffffff;
+	--txt-color: #222222;
+}
+
+body 
+{
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/*-------------------------- Header Section Styling --------------------------*/
+header 
+{
+	background: linear-gradient(to right, #ffe387, #ffd034);
+	color: var(--txt-color);
+	padding: 10px 20px;
+	height: 10vh;
+}
+
+.welcomeMsg h1
+{
+	
+	color:green;
+}
+
+.header-icons i {
+	font-size: 1.5rem;
+	color: var(--txt-color);
+}
+
+.header-icons i:hover {
+	color: var(--bg-color);
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*------------------------------- Home Section Styling -------------------------*/
+.home {
+	background-image: url('../../public/assets/image/hero-bg-2.jpg');
+	background-size: cover;
+	background-position: unset;
+	color: var(--white-color);
+	height:20vh;
+	padding: 0;
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+
+.home .container {
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.slogun {
+	font-size: 3rem;
+	font-weight: bold;
+	position: relative;
+	bottom: 100px;
+	right: 400px;
+	width: 50%;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.home-paragraph {
+	font-size: 1.25rem;
+	position: relative;
+	bottom: 50px;
+	right: 400px;
+	width: 50%;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.home-buttons {
+	position: relative;
+	right: 400px;
+	width: 50%;
+}
+
+.home .btn {
+	font-size: 1.25rem;
+	padding: 15px 40px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.home .btn-primary {
+	background-color: var(--btn-color);
+	color: var(--white-color);
+	border: none;
+}
+
+.home .btn-primary:hover {
+	background-color: var(--btn-hover-color);
+}
+
+.home .btn-outline-light {
+	background-color: transparent;
+	border-color: var(--white-color);
+	color: var(--white-color);
+}
+
+.home .btn-outline-light:hover {
+	background-color: var(--white-color);
+	color: var(--txt-color);
+}
